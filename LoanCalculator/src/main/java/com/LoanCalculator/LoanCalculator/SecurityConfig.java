@@ -30,7 +30,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of(
-                "http://localhost:3000",
+                "http://localhost:3000", 
                 "https://loan-calculator-3opx2xvt5-stellahs-projects.vercel.app"
         ));
         configuration.addAllowedMethod("*");
