@@ -28,4 +28,13 @@ public class LoanDetails {
     public void setYears(int years) {
         this.years = years;
     }
+
+    @Override
+    public String toString() {
+        return "LoanDetails{" +
+                "principal=" + principal +
+                ", interestRate=" + interestRate +
+                ", years=" + years +
+                '}';
+    }
 }
