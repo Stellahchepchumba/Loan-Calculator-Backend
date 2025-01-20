@@ -9,6 +9,12 @@ COPY LoanCalculator/mvnw .
 COPY LoanCalculator/.mvn .mvn
 COPY LoanCalculator/pom.xml .
 
+# Ensure the Maven wrapper is executable
+RUN chmod +x mvnw
+
+# Debugging step: Check if mvnw is there and executable
+RUN ls -l mvnw
+
 # Download dependencies (cached if pom.xml hasn't changed)
 RUN ./mvnw dependency:go-offline -B
 
