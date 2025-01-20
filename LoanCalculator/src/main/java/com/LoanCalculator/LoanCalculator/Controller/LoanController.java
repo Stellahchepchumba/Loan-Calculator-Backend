@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.List;
 
+
+@CrossOrigin
 @RestController
 @RequestMapping("/api/loans")
 public class LoanController {
