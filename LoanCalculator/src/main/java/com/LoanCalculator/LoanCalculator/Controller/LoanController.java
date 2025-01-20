@@ -26,6 +26,9 @@ public class LoanController {
     public ResponseEntity<LoanResponse> calculateLoan(
             @RequestBody LoanDetails loanDetails,
             @RequestParam(required = false, defaultValue = "monthly") String frequency) {
+        System.out.println("Request received for /calculate");
+        System.out.println("Loan Details: " + loanDetails);
+        System.out.println("Frequency: " + frequency);
         try {
             double payment;
             List<String> schedule;
