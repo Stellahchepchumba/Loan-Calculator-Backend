@@ -21,7 +21,7 @@ public class LoanController {
     @Autowired
     private LoanService loanService;
 
-    // Endpoint for calculating loan details monthly and yearly
+    
     @PostMapping("/calculate")
     public ResponseEntity<LoanResponse> calculateLoan(
             @RequestBody LoanDetails loanDetails,
@@ -53,13 +53,12 @@ public class LoanController {
             LoanResponse response = new com.LoanCalculator.LoanCalculator.DTO.LoanResponse(payment, schedule);
             return ResponseEntity.ok(response);
         } catch (Exception e) {
-            e.printStackTrace(); // Log the exception for debugging
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null); // Handle the error properly
+            e.printStackTrace(); 
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null); 
         }
     }
 
 
-    // Export amortization schedule as a CSV file
     @PostMapping("/export")
     public ResponseEntity<byte[]> exportSchedule(
             @RequestBody com.LoanCalculator.LoanCalculator.DTO.LoanDetails loanDetails,
