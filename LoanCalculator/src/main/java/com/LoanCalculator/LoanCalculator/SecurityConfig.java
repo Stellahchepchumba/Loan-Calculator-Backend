@@ -36,7 +36,8 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:3000",
-                "https://loan-calculator-3opx2xvt5-stellahs-projects.vercel.app"
+                "https://loan-calculator-3opx2xvt5-stellahs-projects.vercel.app",
+                "https://loan-calculator-backend-8q48.onrender.com"
         ));
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
