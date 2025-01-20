@@ -31,7 +31,7 @@ public class SecurityConfig {
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:3000",
                 "https://loan-calculator-3opx2xvt5-stellahs-projects.vercel.app"
-        )); // Replace with your frontend URLs
+        ));
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
         configuration.setAllowCredentials(true);
