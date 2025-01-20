@@ -11,8 +11,8 @@ import java.util.List;
 public class LoanService {
 
     public double calculateMonthlyPayment(double principal, double annualRate, int termYears) {
-        double monthlyRate = (annualRate / 100) / 12; // Convert annual rate to monthly
-        int totalMonths = termYears * 12; // Total number of months
+        double monthlyRate = (annualRate / 100) / 12; 
+        int totalMonths = termYears * 12; 
         return (principal * monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) /
                 (Math.pow(1 + monthlyRate, totalMonths) - 1);
     }
@@ -53,7 +53,7 @@ public class LoanService {
     }
 
     public double calculateYearlyPayment(double principal, double annualRate, int termYears) {
-        double yearlyRate = annualRate / 100; // Convert annual rate to decimal
+        double yearlyRate = annualRate / 100; 
         return (principal * yearlyRate * Math.pow(1 + yearlyRate, termYears)) /
                 (Math.pow(1 + yearlyRate, termYears) - 1);
     }
