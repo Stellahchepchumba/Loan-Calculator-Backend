@@ -23,10 +23,8 @@ public class SecurityConfig {
                         .anyRequest().authenticated())
                 .httpBasic(httpBasic -> httpBasic.disable());
 
-
         return http.build();
     }
-
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
@@ -37,7 +35,7 @@ public class SecurityConfig {
         ));
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
-        configuration.setAllowCredentials(false);
+        configuration.setAllowCredentials(true); // Enable credentials
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
